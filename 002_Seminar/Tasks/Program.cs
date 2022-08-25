@@ -30,10 +30,25 @@ string Task13(int number) {
     return result.ToString();
 }
 
+int Task13Ver2(int number) {
+    if (number < 100) {
+        System.Console.WriteLine("Третьей цифры нет");
+        return -1;
+    }
+    
+    int result = 0;
+    while (number > 999) {
+        number /= 10;
+        result = number % 10;
+    }
+
+    return result;
+}
+
 System.Console.WriteLine(Task13(645));
 System.Console.WriteLine(Task13(78));
 System.Console.WriteLine(Task13(32679));
-
+System.Console.WriteLine(Task13Ver2(32679));
 
 /*
 Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
