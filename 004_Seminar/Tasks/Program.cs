@@ -7,7 +7,6 @@
 
 int Task25(int a, int b) {
     int result = a;
-
     for (int i = 2; i <= b; i++) {
         result *= a;
     }
@@ -40,16 +39,10 @@ int Task27(int number) {
 
 void Task29(int number) {
     int[] array = new int[number];
-
     for (int i = 0; i < number; i++) {
         array[i] = new Random().Next();
     }
-
-    System.Console.Write("[");
-    foreach (int element in array) {
-        System.Console.Write($"{element}, ");
-    }
-    System.Console.Write("]");
+    System.Console.WriteLine($"[{string.Join(", ", array)}]");
 }
 
 //System.Console.WriteLine(Task25(3, 5));
