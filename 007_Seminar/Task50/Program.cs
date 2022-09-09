@@ -7,7 +7,7 @@
 5 9 2 3
 8 4 2 4
 
-1, 7 -> такого числа в массиве нет
+вводим позиции по i и j -> если таких нет - выводим, что позиции не существует. Если есть - выводим элемент по этим индексам.
 */
 
 int[,] GetArray(int m, int n) {
@@ -34,18 +34,8 @@ void PrintArray(int[,] array) {
 }
 
 int GetElementByIndexes(int[, ] matrix, int row, int col) {
-    if (row < matrix.GetLength(0) && col < matrix.GetLength(1)) {
+    if (row < matrix.GetLength(0) && row >=0 && col < matrix.GetLength(1) && col >= 0) {
         return matrix[row, col];
-    }
-    else {
-        System.Console.WriteLine("Такого числа в массиве нет");
-        return -1;
-    }
-}
-
-int GetElementByPositions(int[, ] matrix, int row, int col) {
-    if (row <= matrix.GetLength(0) && col <= matrix.GetLength(1)) {
-        return matrix[row - 1, col - 1];
     }
     else {
         System.Console.WriteLine("Такого числа в массиве нет");
@@ -58,5 +48,4 @@ PrintArray(matrix);
 System.Console.WriteLine();
 System.Console.WriteLine(GetElementByIndexes(matrix, 4, 4));
 System.Console.WriteLine(GetElementByIndexes(matrix, 6, 6));
-System.Console.WriteLine(GetElementByPositions(matrix, 5, 5));
-System.Console.WriteLine(GetElementByPositions(matrix, 6, 6));
+System.Console.WriteLine(GetElementByIndexes(matrix, -1, 4));

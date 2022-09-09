@@ -31,7 +31,7 @@ int[,] GetArray(int m, int n) {
     return result;
 }
 
-void getAvgCols(int[,] array) {
+void GetAvgCols(int[,] array) {
     double avg;
     int rows = array.GetLength(0);
     int cols = array.GetLength(1);
@@ -50,7 +50,7 @@ void getAvgCols(int[,] array) {
 int[,] matrix = GetArray(5, 5);
 PrintArray(matrix);
 System.Console.WriteLine();
-getAvgCols(matrix);
+GetAvgCols(matrix);
 
 System.Console.WriteLine();
 int[,] example = new int[,] {{1, 4, 7, 2},
@@ -58,4 +58,4 @@ int[,] example = new int[,] {{1, 4, 7, 2},
                              {8, 4, 2, 4}};
 
 PrintArray(example);
-getAvgCols(example);
+GetAvgCols(example);
