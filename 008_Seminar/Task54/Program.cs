@@ -176,26 +176,36 @@ int[,] GetSpiral(int n) {
             value++;
         }
     }
+    if (n % 2 == 1) result[n / 2, n / 2] = n * n;  
+
     return result;
 }
-
 
 int[,] matrix = GetArray(3, 3);
 PrintArray(matrix);
 System.Console.WriteLine();
+System.Console.WriteLine("Задача 54:");
+PrintArray(GetSortRows(matrix));
 
+System.Console.WriteLine();
+System.Console.WriteLine("Задача 56:");
 System.Console.WriteLine(GetMinSumRowIndex(matrix));
 
-//PrintArray(GetSortRows(matrix));
-
-/*
+System.Console.WriteLine();
+System.Console.WriteLine("Задача 58:");
 int[,] a = {{2, 4}, {3, 2}};
 int[,] b = {{3, 4}, {3, 3}};
+PrintArray(a);
+System.Console.WriteLine();
+PrintArray(b);
+System.Console.WriteLine();
+PrintArray(Multi(a, b));
 
-PrintArray(Multi(a, b));*/
+System.Console.WriteLine();
+System.Console.WriteLine("Задача 60:");
+int[,,] array3 = {{{10,20},{30,40}},{{50,60},{70,80}}};
+PrintThreeDim(array3);
 
-//int[,,] array3 = {{{1,2},{3,4}},{{5,6},{7,8}}};
-
-//PrintThreeDim(array3);
-
-//PrintArray(GetSpiral(4));
+System.Console.WriteLine();
+System.Console.WriteLine("Задача 62:");
+PrintArray(GetSpiral(4));
